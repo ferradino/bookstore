@@ -1,0 +1,24 @@
+{
+  "name": "assignment-2---form-handling",
+  "version": "1.0.0",
+  "description": "This is assignment 2 of the course. It focuses on form validation as well as models and model functions. User can now order a certain amount of the book(s)",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferradino/bookstore.git"
+  },
+  "author": "Nicholas Ferradino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferradino/bookstore/issues"
+  },
+  "homepage": "https://github.com/ferradino/bookstore#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7"
+  }
+}
