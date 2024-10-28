@@ -33,11 +33,11 @@ app.get("/order", function(request, response, next) {
 // 2. Validate that order information is valid
 app.get("/order", function(request, response, next) {
     request.errors = support.validateOrder(request.ISBN, request.quantity);
-
     if (request.errors.length > 0) {
         next(new Error("validation"));
+    } else {
+        next();
     }
-    next();
 });
 
 // 3. Compute price of the order

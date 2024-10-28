@@ -27,7 +27,7 @@ function getBookByISBN(ISBN) {
 // Will generate and return errors if any of the order elements is invalid
 function validateOrder(ISBN, quantity) {
     var errors = [];
-    if (ISBN === 0) {
+    if (ISBN === "0") {
         errors.push("Must select a book!"); 
     }
     if (isNaN(quantity) || quantity < 1) {
