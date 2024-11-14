@@ -1,9 +1,9 @@
 // Get list of books available for purchase
 function getBookList() {
     const bookList = [
-        {ISBN: "1368098168", title: "The Lightning Theif", price: 8.99, imageFile: "./images/978-1368098168.png"},
-        {ISBN: "1423146780", title: "Blood of Olympus", price: 10.99, imageFile: "./images/978-1423146780.png"},
-        {ISBN: "1423163374", title: "The Sword of Summer", price: 9.99, imageFile: "./images/978-1423163374.png"},
+        {ISBN: 1368098168, title: "The Lightning Theif", price: 8.99, imageFile: "./images/978-1368098168.png"},
+        {ISBN: 1423146780, title: "Blood of Olympus", price: 10.99, imageFile: "./images/978-1423146780.png"},
+        {ISBN: 1423163374, title: "The Sword of Summer", price: 9.99, imageFile: "./images/978-1423163374.png"},
     ];
 
     return bookList;
@@ -27,7 +27,7 @@ function getBookByISBN(ISBN) {
 // Will generate and return errors if any of the order elements is invalid
 function validateOrder(ISBN, quantity) {
     var errors = [];
-    if (ISBN === "0") {
+    if (ISBN === 0) {
         errors.push("Must select a book!"); 
     }
     if (isNaN(quantity) || quantity < 1) {

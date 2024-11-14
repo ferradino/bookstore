@@ -25,7 +25,7 @@ app.get("/", function(request, response) {
 // Recieved an order at "/order"
 // 1. Parse order information, create entity object for order
 app.get("/order", function(request, response, next) {
-    request.ISBN = request.query.ISBN;
+    request.ISBN = parseInt(request.query.ISBN);
     request.quantity = request.query.quantity;
     next();
 });
