@@ -1,0 +1,20 @@
+<!-- On submit, this request is sent to localhost:3000/order -->
+<!-- The user can select a book they want as well as the qunaity of that book -->
+<!-- After a user decides the book and quanitty, it can be purchased -->
+<form action="http://localhost:3000/order" method="get">
+    <!-- Dynamically list the 3 books the user can select -->
+    <!-- Add a 4th default option so that there will always be a "book" submitted -->
+    <!-- Not using "978-" prefix so that the value can be parsed as int-->
+    Select a Book:
+    <select name="ISBN">
+        <option value="0" selected="True">Select a Book</option>
+        {{#each booklist}}
+            <option value={{ISBN}}>{{title}} (${{price}})</option>
+        {{/each}}
+    </select><br><br>
+    <!-- User will input how many books they want -->
+    Copies: <input type="text" name="quantity">
+    <br><br>
+    <!-- Button to purchase order -->
+    <input type="submit" value="Purchase"/>
+</form>

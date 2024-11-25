@@ -1,0 +1,11 @@
+<!-- This is the html page that a user will be directed to upon accessing http://localhost:3000/ -->
+<table border="1">
+    <!-- Dynamically list each book (title, price, and book cover) from the book list-->
+    {{#each booklist}}
+        <tr>
+            <td>{{title}}</td>
+            <td>${{price}}</td>
+            <td><img src="images/{{imageFile}}"></td>
+        </tr>
+    {{/each}}
+</table>

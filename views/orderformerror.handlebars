@@ -1,0 +1,22 @@
+<!-- User previously had an invalid order -->
+<!-- Add error messages to order -->
+<!-- User can fix input and resubmit -->
+<form action="http://localhost:3000/order" method="get">
+    <!-- Dynamically list the 3 books the user can select -->
+    <!-- Add a 4th default option so that there will always be a "book" submitted -->
+    <!-- Not using "978-" prefix so that the value can be parsed as int-->
+    Select a Book:
+    <select name="ISBN">
+        <option value="0" selected="True">Select a Book</option>
+        {{#each booklist}}
+            <option value={{ISBN}}>{{title}} (${{price}})</option>
+        {{/each}}
+    </select>
+    {{#if errors.missingISBN}}<i>Please select a book!</i>{{/if}}<br><br>
+    <!-- User will input how many books they want -->
+    Copies: <input type="text" name="quantity" value={{quantity}}>
+    {{#if errors.illegalQuantity}}<i>Must purchase at least one copy!</i>{{/if}}
+    <br><br>
+    <!-- Button to purchase order -->
+    <input type="submit" value="Purchase"/>
+</form>

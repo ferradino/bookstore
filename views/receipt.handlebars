@@ -1,0 +1,18 @@
+<!-- Add image of book that was purchased -->
+<br><img src="images/{{order.book.imageFile}}">
+<h3>Thank you for your order of {{order.book.title}}!</h3>
+<!-- Make a table of the "receipt" -->
+<table border="1">
+    <tr>
+        <td>Number of copies</td>
+        <td>{{order.quantity}}</td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>${{order.book.price}}</td>
+    </tr>
+    <tr>
+        <td>Total (with tax)</td>
+        <td>${{order.bill}}</td>
+    </tr>
+</table>
